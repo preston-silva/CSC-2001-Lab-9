@@ -9,26 +9,26 @@ public class Main {
             return array;
         }
 
-            int mid = array.length / 2;
-            System.out.println(mid);
-            int[] firstHalf = new int[mid];
-            System.out.println(array.length - mid);
-            int[] secondHalf = new int[array.length - mid];
+        int mid = array.length / 2;
+        System.out.println(mid);
+        int[] firstHalf = new int[mid];
+        System.out.println(array.length - mid);
+        int[] secondHalf = new int[array.length - mid];
 
-            for(int j = 0; j < firstHalf.length; j++){
-                firstHalf[j] = array[j];
-                System.out.println("First Half: " + firstHalf[j]);
-            }
+        for(int j = 0; j < firstHalf.length; j++){
+            firstHalf[j] = array[j];
+            System.out.println("First Half: " + firstHalf[j]);
+        }
 
-            for(int j = 0; j < secondHalf.length; j++){
-                secondHalf[j] = array[j + mid];
-                System.out.println("Second Half: " + secondHalf[j]);
-            }
+        for(int j = 0; j < secondHalf.length; j++){
+            secondHalf[j] = array[j + mid];
+            System.out.println("Second Half: " + secondHalf[j]);
+        }
 
-            firstHalf = mergeSort(firstHalf);
-            secondHalf = mergeSort(secondHalf);
+        firstHalf = mergeSort(firstHalf);
+        secondHalf = mergeSort(secondHalf);
 
-            return mergeHelper(firstHalf, secondHalf);
+        return mergeHelper(firstHalf, secondHalf);
 
     }
 
@@ -63,6 +63,16 @@ public class Main {
 
     // Quick sort method given int array
     public static int[] quickSort(int[] array){
+
+        if(array.length <= 1){
+            return array;
+        }
+
+        int pivot = array[0];
+        int[] less = new int[(array.length-1) / 2];
+        int[] more = new int[(array.length-1) / 2];
+
+        
 
     }
 
