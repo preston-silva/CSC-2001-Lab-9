@@ -26,7 +26,7 @@ class MainTest {
         // Even
         testArraySorted = new int[]{0,1,2,3,4,5,6,7,8,9};
         testArrayUnsorted = new int[]{3,9,6,7,0,5,8,2,4,1};
-        assertArrayEquals(testArraySorted, Main.mergeSort(testArrayUnsorted));
+        assertArrayEquals(testArraySorted, Main.quickSort(testArrayUnsorted));
     }
 
 }

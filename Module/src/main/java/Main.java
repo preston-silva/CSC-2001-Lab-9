@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     // comparing merge sort using arrays to quick sort
@@ -69,10 +71,55 @@ public class Main {
         }
 
         int pivot = array[0];
-        int[] less = new int[(array.length-1) / 2];
-        int[] more = new int[(array.length-1) / 2];
 
-        
+        int lessCount = 0;
+
+        for(int i = 1; i < array.length; i++){
+            if(array[i] < pivot){
+                lessCount++;
+            }
+        }
+
+        int[] less = new int[lessCount];
+        int[] more = new int[(array.length-1) - lessCount];
+
+        int lessIndex = 0;
+        int moreIndex = 0;
+
+        for(int i = 1; i < array.length; i++){
+            if(array[i] < pivot){
+                less[lessIndex] = array[i];
+//                System.out.println("Less: " + array[i]);
+                lessIndex++;
+            } else {
+                more[moreIndex] = array[i];
+//                System.out.println("More: " + array[i]);
+                moreIndex++;
+            }
+        }
+
+        less = quickSort(less);
+        more = quickSort(more);
+
+        int[] sorted = new int[array.length];
+
+        int index = 0;
+        for(int elt : less){
+            sorted[index] = elt;
+//            System.out.println(Arrays.toString(sorted));
+            index++;
+        }
+
+        sorted[index] = pivot;
+//        System.out.println(Arrays.toString(sorted));
+        index++;
+
+        for(int elt : more){
+            sorted[index] = elt;
+//            System.out.println(Arrays.toString(sorted));
+            index++;
+        }
+        return sorted;
 
     }
 
