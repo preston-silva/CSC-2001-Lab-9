@@ -15,14 +15,14 @@ public class Main {
 //        System.out.println(array.length - mid);
         int[] secondHalf = new int[array.length - mid];
 
-        for(int j = 0; j < firstHalf.length; j++){
-            firstHalf[j] = array[j];
-//            System.out.println("First Half: " + firstHalf[j]);
+        for(int i = 0; i < firstHalf.length; i++){
+            firstHalf[i] = array[i];
+//            System.out.println("First Half: " + firstHalf[i]);
         }
 
-        for(int j = 0; j < secondHalf.length; j++){
-            secondHalf[j] = array[j + mid];
-//            System.out.println("Second Half: " + secondHalf[j]);
+        for(int i = 0; i < secondHalf.length; i++){
+            secondHalf[i] = array[i + mid];
+//            System.out.println("Second Half: " + secondHalf[i]);
         }
 
         firstHalf = mergeSort(firstHalf);
