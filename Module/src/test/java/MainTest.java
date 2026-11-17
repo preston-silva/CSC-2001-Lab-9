@@ -29,4 +29,54 @@ class MainTest {
         assertArrayEquals(testArraySorted, Main.quickSort(testArrayUnsorted));
     }
 
+    @Test
+    public void testMergeTime(){
+
+        IO.println("Merge Time: ");
+        int[] fillerInts = new int[]{0,3,9,6,7,5,8,2,4,1};
+        for(int i = 1; i < 11; i++){
+
+            int[] testArray = new int[i];
+            for(int j = 0; j < i; j++){
+
+                testArray[j] = fillerInts[j];
+
+            }
+
+            IO.println("Size: " + i);
+            long startTime = System.nanoTime();
+            Main.mergeSort(testArray);
+            long endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000.0;
+            IO.println("Time: " + duration + " microseconds\n");
+
+        }
+
+    }
+
+    @Test
+    public void testQuickTime(){
+
+        IO.println("Quick Time: ");
+        int[] fillerInts = new int[]{0,3,9,6,7,5,8,2,4,1};
+        for(int i = 1; i < 11; i++){
+
+            int[] testArray = new int[i];
+            for(int j = 0; j < i; j++){
+
+                testArray[j] = fillerInts[j];
+
+            }
+
+            IO.println("Size: " + i);
+            long startTime = System.nanoTime();
+            Main.quickSort(testArray);
+            long endTime = System.nanoTime();
+            double duration = (endTime - startTime) / 1000.0;
+            IO.println("Time: " + duration + " microseconds\n");
+
+        }
+
+    }
+
 }

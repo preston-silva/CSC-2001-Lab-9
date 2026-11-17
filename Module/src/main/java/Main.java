@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
 
     // comparing merge sort using arrays to quick sort
@@ -12,19 +10,19 @@ public class Main {
         }
 
         int mid = array.length / 2;
-        System.out.println(mid);
+//        System.out.println(mid);
         int[] firstHalf = new int[mid];
-        System.out.println(array.length - mid);
+//        System.out.println(array.length - mid);
         int[] secondHalf = new int[array.length - mid];
 
         for(int j = 0; j < firstHalf.length; j++){
             firstHalf[j] = array[j];
-            System.out.println("First Half: " + firstHalf[j]);
+//            System.out.println("First Half: " + firstHalf[j]);
         }
 
         for(int j = 0; j < secondHalf.length; j++){
             secondHalf[j] = array[j + mid];
-            System.out.println("Second Half: " + secondHalf[j]);
+//            System.out.println("Second Half: " + secondHalf[j]);
         }
 
         firstHalf = mergeSort(firstHalf);
@@ -56,9 +54,9 @@ public class Main {
             sorted[k++] = right[j++];
         }
 
-        for(int p = 0; p < sorted.length; p++){
-            System.out.println(sorted[p]);
-        }
+//        for(int p = 0; p < sorted.length; p++){
+////            System.out.println(sorted[p]);
+//        }
         return sorted;
 
     }
