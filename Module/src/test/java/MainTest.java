@@ -33,15 +33,9 @@ class MainTest {
     public void testMergeTime(){
 
         IO.println("Merge Time: ");
-        int[] fillerInts = new int[]{0,3,9,6,7,5,8,2,4,1};
-        for(int i = 1; i < 11; i++){
+        for(int i = 1; i < 1000000000; i *= 10){
 
-            int[] testArray = new int[i];
-            for(int j = 0; j < i; j++){
-
-                testArray[j] = fillerInts[j];
-
-            }
+            int[] testArray = Main.arrayGenerator(i);
 
             IO.println("Size: " + i);
             long startTime = System.nanoTime();
@@ -58,15 +52,9 @@ class MainTest {
     public void testQuickTime(){
 
         IO.println("Quick Time: ");
-        int[] fillerInts = new int[]{0,3,9,6,7,5,8,2,4,1};
-        for(int i = 1; i < 11; i++){
+        for(int i = 1; i < 1000000000; i *= 10){
 
-            int[] testArray = new int[i];
-            for(int j = 0; j < i; j++){
-
-                testArray[j] = fillerInts[j];
-
-            }
+            int[] testArray = Main.arrayGenerator(i);
 
             IO.println("Size: " + i);
             long startTime = System.nanoTime();
@@ -76,7 +64,6 @@ class MainTest {
             IO.println("Time: " + duration + " microseconds\n");
 
         }
-
     }
 
 }

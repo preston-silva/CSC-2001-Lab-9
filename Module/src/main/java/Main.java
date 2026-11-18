@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
 
     // comparing merge sort using arrays to quick sort
@@ -118,6 +120,20 @@ public class Main {
             index++;
         }
         return sorted;
+
+    }
+
+    // Test helper to generate random int arrays
+    public static int[] arrayGenerator(int size){
+
+        Random random = new Random();
+        int[] array = new int[size];
+
+        for(int i = 0; i < size; i++){
+            array[i] = random.nextInt();
+        }
+
+        return array;
 
     }
 
